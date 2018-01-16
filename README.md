@@ -23,6 +23,12 @@ $ npm install webpack webpack-dev-server babel-core babel-loader babel-preset-es
 
 ## after installations, please follow the below instructions
 
+-> Add the below commands in package.json in scripts section :
+
+    "start": "npm run build",
+    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot",
+    "build:prod": "webpack -p && cp src/index.html dist/index.html"
+
 -> after installations, create a src directory for your source code
 
 -> inside src dir, create app directory & an index.html file
